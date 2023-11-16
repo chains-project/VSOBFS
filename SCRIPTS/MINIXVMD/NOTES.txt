@@ -1,0 +1,24 @@
+
+Compilers tested on Devuan Chimaera amd64:
+  Devuan         GCC   10         (x86_64)
+  Devuan         CLANG 10         (x86_64)
+  Devuan         PCC   20200630   (x86_64)
+  Own build of   ACK   5          (ia32)
+  Own build of   GCC   6          (ia32)
+  Own build of   TCC   git~2022   (x86_64)
+
+Emulators tested on Devuan Chimaera amd64:
+  qemu-system-i386 5.2.0
+  bochs            2.6.11
+
+Physical hardware tested:
+  ia32
+  x86_64
+
+NOTE we do not need to be able to build on all potentially possible
+platforms, just on a "sufficiently wide" choice of independent OS,
+toolchains and hardware, to be able to cross-verify and trust the
+builds. It can become relevant to add adjustments to the scripts and
+patches, to allow builds with different tools on new platforms, but the
+resulting disk files and disk images do not depend on the tools.
+

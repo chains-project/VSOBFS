@@ -1,0 +1,142 @@
+diff -c ackpack.ori/ncg/i386/table ackpack/ncg/i386/table
+*** ackpack.ori/ncg/i386/table Fri Nov  3 12:08:54 2006
+--- ackpack/ncg/i386/table Sun May 15 12:18:09 2016
+***************
+*** 2376,2382 ****
+    uses REG={ANYCON,0}
+    gen cmp %1,%2
+        je {label,2f}
+!       jl {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+--- 2376,2382 ----
+    uses REG={ANYCON,0}
+    gen cmp %1,%2
+        je {label,2f}
+!       jg {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+***************
+*** 2386,2392 ****
+    uses REG={ANYCON,0}
+    gen cmp %2,%1
+        je {label,2f}
+!       jg {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+--- 2386,2392 ----
+    uses REG={ANYCON,0}
+    gen cmp %2,%1
+        je {label,2f}
+!       jl {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+***************
+*** 2434,2440 ****
+  uses REG = {ANYCON,0}
+    gen cmp %1,%2
+        je  {label,2f}
+!       jb  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
+--- 2434,2440 ----
+  uses REG = {ANYCON,0}
+    gen cmp %1,%2
+        je  {label,2f}
+!       ja  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
+***************
+*** 2443,2449 ****
+  uses REG = {ANYCON,0}
+    gen cmp %2,%1
+        je  {label,2f}
+!       ja  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
+--- 2443,2449 ----
+  uses REG = {ANYCON,0}
+    gen cmp %2,%1
+        je  {label,2f}
+!       jb  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
+diff -c ackpack.ori/ncg/i86/table ackpack/ncg/i86/table
+*** ackpack.ori/ncg/i86/table Fri Nov  3 12:08:53 2006
+--- ackpack/ncg/i86/table Sun May 15 12:17:53 2016
+***************
+*** 2556,2562 ****
+    uses REG={ANYCON,0}
+    gen cmp %1,%2
+        je {label,2f}
+!       jl {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+--- 2556,2562 ----
+    uses REG={ANYCON,0}
+    gen cmp %1,%2
+        je {label,2f}
+!       jg {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+***************
+*** 2566,2572 ****
+    uses REG={ANYCON,0}
+    gen cmp %2,%1
+        je {label,2f}
+!       jg {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+--- 2566,2572 ----
+    uses REG={ANYCON,0}
+    gen cmp %2,%1
+        je {label,2f}
+!       jl {label,1f}
+        inc %a
+        jmp {label,2f}
+        1:
+***************
+*** 2622,2628 ****
+  uses REG = {ANYCON,0}
+    gen cmp %1,%2
+        je  {label,2f}
+!       jb  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
+--- 2622,2628 ----
+  uses REG = {ANYCON,0}
+    gen cmp %1,%2
+        je  {label,2f}
+!       ja  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
+***************
+*** 2631,2637 ****
+  uses REG = {ANYCON,0}
+    gen cmp %2,%1
+        je  {label,2f}
+!       ja  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
+--- 2631,2637 ----
+  uses REG = {ANYCON,0}
+    gen cmp %2,%1
+        je  {label,2f}
+!       jb  {label,1f}
+        inc %a
+        jmp {label,2f}
+        1: dec %a
